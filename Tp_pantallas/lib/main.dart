@@ -1,8 +1,6 @@
 import 'package:clase18_4/core/app_router.dart';
 import 'package:flutter/material.dart';
 
-
-
 void main() {
   runApp( const MainApp());
 }
