@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:clase18_4/presentation/Screens/login_screen.dart';
+import 'package:clase18_4/presentation/Screens/Login_screen.dart';
 
 TextEditingController passController = TextEditingController();
 TextEditingController userController = TextEditingController();
@@ -10,7 +10,7 @@ class RegisterScreen extends StatelessWidget {
   static const String name = 'register';
 
   String userName;
-  RegisterScreen({super.key, this.userName = ""});
+  RegisterScreen({super.key, this.userName = "", required List<String> users});
 
   @override
   Widget build(BuildContext context) {

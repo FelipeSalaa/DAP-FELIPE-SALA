@@ -2,7 +2,6 @@
 import 'package:clase18_4/presentation/Screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
 // ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
   static const String name = 'home';

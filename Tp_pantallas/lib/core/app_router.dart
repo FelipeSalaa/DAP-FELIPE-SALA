@@ -20,7 +20,7 @@ final appRouter = GoRouter(
     GoRoute(
       path: '/register',
       name: RegisterScreen.name,
-      builder: (context, state) => RegisterScreen(),
+      builder: (context, state) => RegisterScreen(users: state.extra as List<String>),
     ),
   ],
 );
