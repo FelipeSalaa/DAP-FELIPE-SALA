@@ -1,5 +1,4 @@
 // ignore_for_file: unused_import
-
 import 'package:clase18_4/presentation/Screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -13,23 +12,23 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    List<String> titulos = ["primero", "segundo", "tercero"];
+    List<String> descripcion = ["1", "2", "3"];
+
     return Scaffold(
-      appBar: AppBar(title: const Text('Home')),
-      body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text(
-              'Bienvenido  ',
-              style: TextStyle(fontSize: 20),
+      body: ListView.builder(
+        itemCount: titulos.length,
+        itemBuilder: (context, index) {
+          return Card(
+            child: ListTile(
+              title: Text(
+                titulos[index],
+              ),
+              subtitle: Text(descripcion[index]),
             ),
-            Text(
-              userName,
-              style: const TextStyle(
-                  color: Color.fromRGBO(252, 1, 14, 1), fontSize: 30),
-            ),
-          ],
-        ),
+          );
+        },
       ),
     );
   }

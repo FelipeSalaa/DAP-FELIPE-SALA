@@ -9,11 +9,10 @@ TextEditingController userController = TextEditingController();
 List<String> users = ['user', 'macaqunho', 'Papanatas'];
 List<String> pass = ['pass', 'dobrasil', 'agusminion04'];
 
-const String name = 'login';
 
 // ignore: must_be_immutable
 class LoginScreen extends StatelessWidget {
-  
+  static const String name = 'login';
 
   String userName;
   LoginScreen({super.key, this.userName = ""});
@@ -35,7 +34,7 @@ class LoginScreen extends StatelessWidget {
             controller: passController,
             decoration: const InputDecoration(
               hintText: 'Contraseña',
-              icon: Icon(Icons.lock_clock_outlined),
+              icon: Icon(Icons.lock_outline_rounded),
             ),
             obscureText: true,
           ),
@@ -53,8 +52,7 @@ class LoginScreen extends StatelessWidget {
                 );
                 ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 context.pushNamed(HomeScreen.name, extra: users[inputUser]);
-              } else if (userController.text == '' ||
-                  passController.text == '') {
+              } else if (userController.text == '' || passController.text == '') {
                 SnackBar snackBar = const SnackBar(
                   content: Text('Campo Vacío'),
                   duration: Duration(milliseconds: 1500),
