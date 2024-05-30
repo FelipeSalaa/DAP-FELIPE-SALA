@@ -13,14 +13,14 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> titulos = [
-      "Cultura Judia lii",
+      "Cultura Judia",
       "Desarrollo de aplicaciones informaticas ",
       "Educación Fisica",
       "Educación Judia",
-      "Estructura y Funcionamiento de los Sistemas li ",
+      "Estructura y Funcionamiento de los Sistemas",
       "Filosofia",
       "Historia",
-      "Inglés"
+      "Inglés",
       "Lengua y Literatura",
       "Matematica",
       "Metodología de Proyectos",
@@ -46,18 +46,34 @@ class HomeScreen extends StatelessWidget {
     ];
 
     return Scaffold(
-      body: ListView.builder(
-        itemCount: titulos.length,
-        itemBuilder: (context, index) {
-          return Card(
-            child: ListTile(
-              title: Text(
-                titulos[index],
-              ),
-              subtitle: Text(descripcion[index]),
-            ),
-          );
-        },
+      appBar: AppBar(
+        title: const Text("Materias 5to año"),
+        centerTitle: true,
+        backgroundColor: const Color.fromARGB(86, 0, 230, 54),
+      ),
+      body: Center(
+        child: Container(
+          width: 500,
+          height: double.infinity,
+          color: const Color.fromARGB(37, 60, 57, 46),
+          margin: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(30),
+          child: ListView.separated(
+            itemCount: titulos.length,
+            itemBuilder: (context, index) {
+              return Card(
+                child: ListTile(
+                  title: Text(
+                    titulos[index],
+                  ),
+                  subtitle: Text(descripcion[index]),
+                ),
+              );
+            },
+            separatorBuilder: (BuildContext context, int index) =>
+                const Divider(),
+          ),
+        ),
       ),
     );
   }
