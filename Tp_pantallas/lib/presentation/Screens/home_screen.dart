@@ -12,37 +12,56 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<String> titulos = [
-      "Cultura Judia",
-      "Desarrollo de aplicaciones informaticas ",
-      "Educación Fisica",
-      "Educación Judia",
-      "Estructura y Funcionamiento de los Sistemas",
-      "Filosofia",
-      "Historia",
-      "Inglés",
-      "Lengua y Literatura",
-      "Matematica",
-      "Metodología de Proyectos",
-      "Proyectos de Producción",
-      "Quimica",
-      "Seminario de Informatica y Telecomunicaciones"
-    ];
-    List<String> descripcion = [
-      "Ivon Lorena Steiner",
-      "Alejandro Breitman",
-      "Mariano Gonzalez Slaibe",
-      "Demian Jmelnizky",
-      "Marcos Alegre",
-      "Daniela Alejandra Bustamante",
-      "Mirko Veckiardo",
-      "Profesor correspondiente a cada nivel",
-      "Maria del Pilar Lopez Vera",
-      "Sofía Romano",
-      "Alejandro Breitman",
-      "Eduardo Brandes",
-      "Pablo Stark",
-      "Mirko Veckiardo"
+    Materia Matematica = Materia();
+    Matematica.name = "Matematica";
+    Matematica.description = "Sofia Roma";
+    Materia Lengua = Materia();
+    Lengua.name = "Lengua";
+    Lengua.description = "Piliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii";
+    Materia Dap1 = Materia();
+    Dap1.name = "Dap1";
+    Dap1.description = "Ale";
+    Materia Dap2 = Materia();
+    Dap2.name = "Dap2";
+    Dap2.description = "Ruben";
+    Materia HRC = Materia();
+    HRC.name = "HRC";
+    HRC.description = "Mirko & Prieto";
+    Materia ST = Materia();
+    ST.name = "ST";
+    ST.description = "Mirko & Prieto";
+    Materia CultJudia = Materia();
+    CultJudia.name = "Cultura Judia";
+    CultJudia.description = "Meir";
+    Materia EdJudia = Materia();
+    EdJudia.name = "Educacion Judia";
+    EdJudia.description = "Demian";
+    Materia EdFisica = Materia();
+    EdFisica.name = "Educación Física";
+    EdFisica.description = "Mariano Moreno";
+    Materia Quimica = Materia();
+    Quimica.name = "Quimica";
+    Quimica.description = "Pablito Sr. Stark";
+    Materia Filosofia = Materia();
+    Filosofia.name = "Filosofia";
+    Filosofia.description = "Daniela Bustamante";
+    Materia PP = Materia();
+    PP.name = "Producción De Proyectos";
+    PP.description = "Facufablab & Edu";
+
+    List<Materia> Materias = [
+      Matematica,
+      Lengua,
+      Quimica,
+      Filosofia,
+      EdFisica,
+      EdJudia,
+      CultJudia,
+      Dap1,
+      Dap2,
+      HRC,
+      ST,
+      PP
     ];
 
     return Scaffold(
