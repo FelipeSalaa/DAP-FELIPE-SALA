@@ -12,44 +12,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Materia Matematica = Materia();
-    Matematica.name = "Matematica";
-    Matematica.description = "Sofia Roma";
-    Materia Lengua = Materia();
-    Lengua.name = "Lengua";
-    Lengua.description = "Piliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii";
-    Materia Dap1 = Materia();
-    Dap1.name = "Dap1";
-    Dap1.description = "Ale";
-    Materia Dap2 = Materia();
-    Dap2.name = "Dap2";
-    Dap2.description = "Ruben";
-    Materia HRC = Materia();
-    HRC.name = "HRC";
-    HRC.description = "Mirko & Prieto";
-    Materia ST = Materia();
-    ST.name = "ST";
-    ST.description = "Mirko & Prieto";
-    Materia CultJudia = Materia();
-    CultJudia.name = "Cultura Judia";
-    CultJudia.description = "Meir";
-    Materia EdJudia = Materia();
-    EdJudia.name = "Educacion Judia";
-    EdJudia.description = "Demian";
-    Materia EdFisica = Materia();
-    EdFisica.name = "Educación Física";
-    EdFisica.description = "Mariano Moreno";
-    Materia Quimica = Materia();
-    Quimica.name = "Quimica";
-    Quimica.description = "Pablito Sr. Stark";
-    Materia Filosofia = Materia();
-    Filosofia.name = "Filosofia";
-    Filosofia.description = "Daniela Bustamante";
-    Materia PP = Materia();
-    PP.name = "Producción De Proyectos";
-    PP.description = "Facufablab & Edu";
-
-    List<Materia> Materias = [
+    List<Object> Materias = [
       Matematica,
       Lengua,
       Quimica,
@@ -78,14 +41,14 @@ class HomeScreen extends StatelessWidget {
           margin: const EdgeInsets.all(20),
           padding: const EdgeInsets.all(30),
           child: ListView.separated(
-            itemCount: titulos.length,
+            itemCount: Materias.length,
             itemBuilder: (context, index) {
               return Card(
                 child: ListTile(
                   title: Text(
-                    titulos[index],
+                    Materias[index],
                   ),
-                  subtitle: Text(descripcion[index]),
+                  subtitle: Text(Materias.description[index]),
                 ),
               );
             },
