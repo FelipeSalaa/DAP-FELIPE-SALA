@@ -1,3 +1,4 @@
+import 'package:clase18_4/presentation/Screens/detail_screen.dart';
 import 'package:clase18_4/presentation/Screens/home_screen.dart';
 import 'package:clase18_4/presentation/Screens/login_screen.dart';
 
@@ -9,12 +10,17 @@ final appRouter = GoRouter(
     GoRoute(
       path: '/login',
       name: LoginScreen.name,
-      builder: (context, state) => LoginScreen(),
+      builder: (context, state) => const LoginScreen(),
     ),
     GoRoute(
       path: '/home',
       name: HomeScreen.name,
-      builder: (context, state) => HomeScreen(userName: state.extra as String),
+      builder: (context, state) => const HomeScreen(),
+    ),
+    GoRoute(
+      path: '/detail',
+      name: DetailScreen.name,
+      builder: (context, state) => DetailScreen(nombre: 'state.extra as String', description: 'state.extra as String',),
     ),
   ],
 );
