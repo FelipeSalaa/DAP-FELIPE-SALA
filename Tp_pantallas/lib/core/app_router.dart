@@ -1,3 +1,4 @@
+import 'package:clase18_4/core/entities.dart';
 import 'package:clase18_4/presentation/Screens/detail_screen.dart';
 import 'package:clase18_4/presentation/Screens/home_screen.dart';
 import 'package:clase18_4/presentation/Screens/login_screen.dart';
@@ -20,7 +21,7 @@ final appRouter = GoRouter(
     GoRoute(
       path: '/detail',
       name: DetailScreen.name,
-      builder: (context, state) => DetailScreen(nombre: 'state.extra as String', description: 'state.extra as String',),
+      builder: (context, state) => DetailScreen(materia: state.extra as Materia),
     ),
   ],
 );

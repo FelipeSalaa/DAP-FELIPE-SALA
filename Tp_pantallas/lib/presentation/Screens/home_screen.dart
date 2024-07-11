@@ -39,8 +39,7 @@ class HomeScreen extends StatelessWidget {
                   title: Text(materia.name),
                   subtitle: Text(materia.description),
                   onTap: () {
-                    context.pushNamed(DetailScreen.name,
-                        extra: {materia.name, materia.description});
+                    context.pushNamed(DetailScreen.name, extra: materia);
                   },
                 ),
               );
