@@ -1,11 +1,6 @@
-// ignore_for_file: unused_import
-import 'package:clase18_4/presentation/Screens/detail_screen.dart';
-import 'package:flutter/widgets.dart';
-
-import 'login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:clase18_4/core/entities.dart';
+import 'detail_screen.dart';
 import 'package:clase18_4/core/data/data_materias.dart';
 
 // ignore: must_be_immutable

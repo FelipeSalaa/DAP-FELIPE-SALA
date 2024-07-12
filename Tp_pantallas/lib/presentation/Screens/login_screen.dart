@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-// ignore: unused_import
-import 'package:clase18_4/core/entities.dart';
 import 'package:clase18_4/core/data/data_users.dart';
-import 'package:clase18_4/presentation/Screens/home_screen.dart';
+import 'home_screen.dart';
 
 TextEditingController passController = TextEditingController();
 TextEditingController userController = TextEditingController();
@@ -85,31 +83,3 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
-
-              /*
-              int inputUser = users.indexOf(userController.text);
-              int inputPass = pass.indexOf(passController.text);
-
-              if ((inputUser == inputPass && inputUser != -1)) {
-                SnackBar snackBar = const SnackBar(
-                  content: Text('Login Exitoso'),
-                  duration: Duration(milliseconds: 1500),
-                  backgroundColor: Color.fromARGB(182, 105, 224, 123),
-                );
-                ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                context.pushNamed(HomeScreen.name, extra: users[inputUser]);
-              } else if (userController.text == '' ||  passController.text == '') {
-                SnackBar snackBar = const SnackBar(
-                  content: Text('Campo Vacío'),
-                  duration: Duration(milliseconds: 1500),
-                  backgroundColor: Color.fromARGB(182, 237, 8, 8),
-                );
-                ScaffoldMessenger.of(context).showSnackBar(snackBar);
-              } else {
-                SnackBar snackBar = const SnackBar(
-                  content: Text('Usuario o Contraseña Incorrectos'),
-                  duration: Duration(milliseconds: 1500),
-                  backgroundColor: Color.fromARGB(182, 237, 8, 8),
-                );
-                ScaffoldMessenger.of(context).showSnackBar(snackBar);
-              }*/

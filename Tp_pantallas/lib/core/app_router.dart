@@ -1,4 +1,4 @@
-import 'package:clase18_4/core/entities.dart';
+import 'entities.dart';
 import 'package:clase18_4/presentation/Screens/detail_screen.dart';
 import 'package:clase18_4/presentation/Screens/home_screen.dart';
 import 'package:clase18_4/presentation/Screens/login_screen.dart';

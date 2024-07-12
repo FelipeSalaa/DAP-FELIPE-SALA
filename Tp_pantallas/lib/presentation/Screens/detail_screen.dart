@@ -1,17 +1,11 @@
-// ignore_for_file: unused_import
 import 'package:clase18_4/core/entities.dart';
-import 'package:flutter/animation.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
-import 'home_screen.dart';
-import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class DetailScreen extends StatelessWidget {
   static const String name = 'detail';
-  Materia materia;
-  DetailScreen({super.key, required this.materia});
+  final Materia materia;
+  const DetailScreen({super.key, required this.materia});
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +16,44 @@ class DetailScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: const Color.fromARGB(139, 0, 243, 223),
       ),
-      body: const Center(
-        child: Text(
-          'profe:',
-          selectionColor: Color.fromARGB(255, 255, 0, 0),
-          style: TextStyle(fontSize: 16),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            const SizedBox(height: 150),
+            Text(
+              'Materia: ${materia.name}',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            Text(
+              'Profesor/a a cargo: ${materia.description}',
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
+            const SizedBox(height: 100), //separacion
+            if (materia.image != null && materia.image2 == null)
+              SizedBox(
+                height: 300,
+                child: Image.network(
+                  materia.image!,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            if (materia.image != null && materia.image2 != null)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.network(
+                    materia.image!,
+                    fit: BoxFit.cover,
+                  ),
+                  const SizedBox(width: 50), //separacion
+                  Image.network(
+                    materia.image2!,
+                    fit: BoxFit.cover,
+                  ),
+                ],
+              ),
+          ],
         ),
       ),
     );
