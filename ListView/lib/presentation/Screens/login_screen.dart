@@ -24,10 +24,9 @@ class LoginScreen extends StatelessWidget {
               hintText: 'Usuario',
               border:OutlineInputBorder(borderRadius:BorderRadius.all(Radius.circular(90))),
               filled: true,
-              fillColor:  Color.fromARGB(255, 152, 230, 217),
+              fillColor: Color.fromARGB(255, 152, 230, 217),
               icon: Icon(Icons.person_2_outlined),
               iconColor: Color.fromARGB(200, 255, 255, 255)
-              
             ),
           ),
           TextField(
@@ -54,7 +53,6 @@ class LoginScreen extends StatelessWidget {
                 ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 return;
               }
-
               for (var i = 0; i < cuentas.length; i++) {
                 final user = cuentas[i];
                 if (user.name == userController.text && user.pass == passController.text) {
