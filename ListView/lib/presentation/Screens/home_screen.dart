@@ -31,6 +31,7 @@ class HomeScreen extends StatelessWidget {
               return Card(
                 color: const Color.fromARGB(255, 83, 159, 194),
                 child: ListTile(
+                leading: materia.image != null ? Image.network(materia.image!) : null, // esto es igual a decir:  if (materia.image != null) {Image.network(materia.image!)} else {null}
                   title: Text(materia.name),
                   subtitle: Text(materia.description),
                   onTap: () {
