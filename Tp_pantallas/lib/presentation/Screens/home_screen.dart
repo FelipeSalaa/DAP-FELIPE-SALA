@@ -1,34 +1,45 @@
-// ignore_for_file: unused_import
-
-import 'package:clase18_4/presentation/Screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'detail_screen.dart';
+import 'package:clase18_4/core/data/data_materias.dart';
 
 // ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
   static const String name = 'home';
-
-  String userName;
-  HomeScreen({super.key, this.userName = ""});
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Home')),
+      backgroundColor: const Color.fromARGB(255, 6, 71, 68),
+      appBar: AppBar(
+        title: const Text("Materias 5to año"),
+        centerTitle: true,
+        backgroundColor: const Color.fromARGB(139, 0, 243, 223),
+      ),
       body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text(
-              'Bienvenido  ',
-              style: TextStyle(fontSize: 20),
-            ),
-            Text(
-              userName,
-              style: const TextStyle(
-                  color: Color.fromRGBO(252, 1, 14, 1), fontSize: 30),
-            ),
-          ],
+        child: Container(
+          width: 600,
+          height: double.infinity,
+          color: const Color.fromARGB(71, 5, 51, 49),
+          margin: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(30),
+          child: ListView.builder(
+            itemCount: materias.length,
+            itemBuilder: (context, index) {
+              final materia = materias[index]; // creas una variable que hace referencia a un solo objeto de la lista por vez
+              return Card(
+                color: const Color.fromARGB(255, 83, 159, 194),
+                child: ListTile(
+                  title: Text(materia.name),
+                  subtitle: Text(materia.description),
+                  onTap: () {
+                    context.pushNamed(DetailScreen.name, extra: materia);
+                  },
+                ),
+              );
+            },
+          ),
         ),
       ),
     );
