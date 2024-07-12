@@ -21,13 +21,31 @@ class DetailScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             const SizedBox(height: 150),
-            Text(
+            DecoratedBox(
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 49, 156, 151),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Text(
               'Materia: ${materia.name}',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            Text(
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 26,
+                ),
+              ),
+            ),            
+            DecoratedBox(
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 49, 156, 151),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Text(
               'Profesor/a a cargo: ${materia.description}',
-              style: Theme.of(context).textTheme.titleLarge,
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 16,
+                ),
+              ),
             ),
             const SizedBox(height: 100), //separacion
             if (materia.image != null && materia.image2 == null)
